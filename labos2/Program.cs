@@ -6,7 +6,17 @@ namespace labos2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DiceRoller diceRoller = new DiceRoller();
+            for (int i = 0; i < 20; i++)
+            {
+                diceRoller.InsertDie(new Die(6));
+            }
+            diceRoller.RollAllDice();
+            foreach(int i in diceRoller.GetRollingResults())
+            {
+                Console.WriteLine(i);
+            }
+
         }
     }
 }
